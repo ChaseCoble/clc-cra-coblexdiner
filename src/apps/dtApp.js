@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuContainer from '../components/menu/menuContainer'
 
 function dtApp() {
     return(
@@ -12,9 +13,9 @@ function dtApp() {
                 </div>
             </div>
             <div id = "dtApp-content">
-                {/* <ChatBot />
-                <MenuContainer /> */}
-                Chatbot and MenuContainer Components
+                {/* <ChatBot />*/}
+                <MenuContainer />
+                Chatbot
             </div>
             <div id = "dtApp-footer">
                 <div id = "dtApp-contact-wrapper"> Contact Information </div>

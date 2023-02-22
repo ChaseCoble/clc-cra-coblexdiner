@@ -87,7 +87,7 @@ const masterCatalogue = {
                     beverage3 : {
                         name : 'Essential Coding Coffees',
                         price : 2.99,
-                        desc : ["A coffee with a single syrup but enough energy to fuel your productive day",["beverageselectioncomponent"]] 
+                        desc : ['A coffee with a single syrup but enough energy to fuel your productive day',['beverageselectioncomponent']] 
                     }
                 }
             },
@@ -304,31 +304,28 @@ const masterCatalogue = {
             }
         }
     },
-    specialcontext : {
-        checkout : {},
-        clearOrder : {},
-        firstMeeting : {
-            subCategoryName : 'About Us',
-            contentHeader : 'Our Vision',
-            content : 'Our vision is to be the friendliest and most current internet cafe in all of Kansas. Our founder, Chase Coble, started this internet cafe to increase community support for the computer sciences in Salina as well as utilizing his three great passions; Computer Sciences, Culinary Arts, and Family! We are here to make you feel like family, learn like students, and eat like gourmets!'
-        }
-    }
 };
 
 
-const queryCatalogue = function queryCatalogue(menuState, subMenuState, subMenuStateProps, submenuStatePropDetails) {
+const queryCatalogue = function queryCatalogue(menuState, subMenuStateClassification, subMenuState, subMenuStateDataCategories, menuStateContent) {
     var selectedCatalogue = '';
     switch (arguments.length) {
+        case 5 : selectedCatalogue = masterCatalogue[menuState][subMenuStateClassification][subMenuState][subMenuStateDataCategories][menuStateContent]
+            break; 
         case 4 :
-            selectedCatalogue = masterCatalogue[menuState][subMenuState][subMenuStateProps][submenuStatePropDetails]
+            const selectionPrecursor1 = masterCatalogue[menuState];
+            const selectionPrecursor2 = selectionPrecursor1[subMenuStateClassification];
+            const selectionPrecursor3 = selectionPrecursor2[subMenuState]
+            selectedCatalogue = selectionPrecursor3[subMenuStateDataCategories]
             break;
         case 3 : 
-            selectedCatalogue = masterCatalogue[menuState][subMenuState][subMenuStateProps]
+            selectedCatalogue = masterCatalogue[menuState][subMenuStateClassification][subMenuState]
             break;
         case 2 : 
-            selectedCatalogue = masterCatalogue[menuState][subMenuState]
+            selectedCatalogue = masterCatalogue[menuState][subMenuStateClassification]
             break;
-        case 1 : selectedCatalogue = masterCatalogue[menuState]
+        case 1 : selectedCatalogue = "Error Report in Console"
+            console.log("Non Substantive Entry")
             break;
         case 0 : selectedCatalogue = "Error Report in Console"
             console.log('queryCatalogue Error')

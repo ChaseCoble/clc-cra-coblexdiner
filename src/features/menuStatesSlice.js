@@ -1,19 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 import selectChatbotDialogue from '../catalogues/selectChatbotDialogue'; 
 
+const initialState = {
+    menuState : 'aboutUs',
+    subMenuState : 'introduction',
+    chatContent : selectChatbotDialogue('specialcontext' , 'firstMeeting' ),
+    tabId : 0,
+    menuItemId : 0 
+}
 const menuSlice = createSlice({
     name: "menuState",
-    initialState: {
-        value : {
-            menuState : 'specialContext',
-            subMenuState : 'firstMeeting',
-            chatContent : '',
-            subMenuStateProps : '',
-            tabId : 0,
-            menuItemId : 0 
-        }
-    },
-    reducers: {
+    initialState
+    ,
+    reducers : {
         updateMenuState : (state, action) => {
             state.menuState = action.payload;
         },
