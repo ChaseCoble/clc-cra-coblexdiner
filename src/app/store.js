@@ -5,7 +5,7 @@ import thunk from "redux-thunk";
 
 const store = configureStore({
     reducer: {
-        cart : cartSlice,
+        cartState : cartSlice,
         menuState : menuSlice
     },
     middleware : [thunk]     

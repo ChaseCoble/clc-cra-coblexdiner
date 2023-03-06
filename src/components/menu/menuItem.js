@@ -2,44 +2,54 @@ import React from "react";
 import { queryCatalogue } from "../../catalogues/selectFromCatalogue"
 import { useSelector, useDispatch } from "react-redux"
 import { addItem, addCost } from "../../features/cartSlice"
-import { incrementMenuItemId } from "../../features/menuStatesSlice";
+import { updateChatSubCategoryState } from "../../features/menuStatesSlice";
+
  
 
 function MenuItem() {
+    console.log("MenuItem mounted");
     const menuState = useSelector((state) => state.menuState);
-    const menuItemId = menuState.menuItemId;
-    const menuItemContent = queryCatalogue(menuState.menustate, "subCategories", menuState.subMenuState, "content" );
-    const menuItemKeyList = menuItemContent.keys();
+    const menuItemContent = queryCatalogue(menuState.menuState, 'subCategories', menuState.subMenuState, 'content' );
+    const menuItemKeyList = Object.keys(menuItemContent);
     const dispatch = useDispatch();
-    const menuItemQuery = queryCatalogue(menuState.menustate, "subCategories", menuState.subMenuState, "content", menuItemKeyList[menuItemId]);
-    const menuItemName = menuItemQuery.name;
-    const menuItemPrice = menuItemQuery.price.toString();
-    const menuItemDesc = menuItemQuery.desc;
-    const menuItemContainerSelector = Document.querySelector('.menu-item-container');
-    menuItemContainerSelector.id("menu-item-container-" + menuItemId.toString());
-    const menuItemContainerSelectById = Document.getElementById("menu-item-container-" + menuItemId.toString())
-    menuItemContainerSelectById.setAttribute('data-name' , menuItemName );
-    menuItemContainerSelectById.setAttribute('data-price' , menuItemQuery.price );
-    const buyButton = menuItemContainerSelectById.querySelector('.buy-btn');
-    buyButton.addEventListener("click", () => {
-        const clickedItemId = buyButton.target.id;
-        handleClick(  clickedItemId  );
-    });
-    
-    function handleClick( clickedItem) {
+    console.log(menuItemKeyList);
+
+    function handleClick(clickedItem) {
         dispatch(addItem(clickedItem.dataset.name));
         dispatch(addCost(clickedItem.dataset.price));
-    };
-    dispatch(incrementMenuItemId);
+        dispatch(updateChatSubCategoryState(menuState.subMenuState))
+    }
 
-    return(
-        <div className = "menu-item-container">
-            <div className = "menu-item-name"> {menuItemName} </div>
-            <div className = "menu-item-price"> {menuItemPrice}</div>
-            <div className = "menu-item-desc"> {menuItemDesc} </div>
-            <button className = 'btn buy-btn'>Purchase</button>
-        </div>
-    )
+    const menuItems = menuItemKeyList.map((key) => {
+        const menuItemQuery = queryCatalogue(menuState.menuState, 'subCategories', menuState.subMenuState, 'content', key);
+        const menuItemName = menuItemQuery.name;
+        const menuItemDesc = menuItemQuery.desc;
+        var menuItemPrice = '';
+        if (typeof menuItemQuery.price === 'number') {
+            menuItemPrice = '$' + menuItemQuery.price.toString();
+            return (
+                <div key={key} className="menu-item-container">
+                    <div className="menu-item-name">{menuItemName}</div>
+                    <div className="menu-item-price">{menuItemPrice}</div>
+                    <div className="menu-item-desc">{menuItemDesc}</div>
+                    <button className="btn buy-btn" data-name={menuItemName} data-price={menuItemQuery.price} onClick={(e) => handleClick(e.currentTarget)}>Purchase</button>
+                </div>
+            );
+        } else {
+            menuItemPrice = ''
+            return (
+                <div key={key} className="menu-item-container">
+                    <div className="menu-item-name">{menuItemName}</div>
+                    <div className="menu-item-price">{menuItemPrice}</div>
+                    <div className="menu-item-desc">{menuItemDesc}</div>
+                </div>
+            );
+        }
+    });
+
+    return <div>{menuItems}</div>;
 }
 
-export default MenuItem
+export default MenuItem;
+
+

@@ -1,9 +1,8 @@
 const chatbotVocabulary = {
         aboutUs : {
             introduction : ["Enjoy our vision statement, my programmer, I mean employer, has tons of passion for this establishment"],
-            contact : ['An array of all our sockets, I mean a list of all our contact information!'],
-            staff : ["Feel free to learn all you want about my sweet little human companions"],
-            hours : ['Come by for fun, events and all you could imagine!']
+            contactHours : ['An array of all our sockets, I mean a list of all our contact information!'],
+            staff : ["Feel free to learn all you want about my sweet little human companions"]
         },
         breakfast : {
             introduction : ['The Bootup breakfast selection! What a wonderful choice! <br> Enjoy uploading these dishes to your BIOS! ...Erm I mean your biological processes...<br> Oh boy... Just try the Byscuits and Gravy, its a Coble family recipe!'],
@@ -94,15 +93,15 @@ const chatbotVocabulary = {
         specialcontext: {
             checkout : ["Would you like to add a tip for your lovely virtual server? I accept bitcoin, dogecoin, and memory cards! Just kidding, though don't tip compu- compensated employees"],
             clearOrder : ["Feel free to start your order over! I have infinite RAM, I mean patience!"],
-            firstMeeting : ['Hello! I am your totally alive and human server, Turing! <br> Welcome to Coble X (pronounced "Cross") Internet cafe! Enjoy browsing our menu selections of delectable delicacies and stellar services!'],
+            firstMeeting : ['Hello! I am your totally alive and human server, Turing! Welcome to Coble X (pronounced Cross) Internet cafe! Enjoy browsing our menu selections of delectable delicacies and stellar services!'],
             checkoutComplete : ['Thank you for visiting! We hope to see you soon!']
         }
     }
 
-    function selectChatbotDialogue(menuState, subMenuChatState) {
-        const menuContextProp = chatbotVocabulary[menuState];
-        const selectedChat = menuContextProp[subMenuChatState];
-        const randomChatString = selectedChat[Math.floor(Math.random()*selectedChat.length)];
+    function selectChatbotDialogue(menuChatState, subMenuChatState) {
+        const selectedChat = chatbotVocabulary[menuChatState][subMenuChatState];
+        const selectedChatLength = selectedChat.length;
+        const randomChatString = selectedChat[Math.floor(Math.random()*selectedChatLength)];
             return (randomChatString)
     }
     

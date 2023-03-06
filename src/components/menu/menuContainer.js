@@ -8,27 +8,22 @@ import { useSelector } from "react-redux";
 function MenuContainer() {
     const cartState = useSelector((state) => state.cartState);
     const menuState = useSelector((state) => state.menuState);
-    const subCategories = "subCategories";
-    const content = "content";
     console.log(menuState.menuState);
+    console.log(cartState.total);
     console.log(menuState.subMenuState);
-    const menuItemId = menuState.menuItemId;
-    console.log(menuItemId);
-    const menuItemContent = queryCatalogue(menuState.menustate, subCategories, menuState.subMenuState, content );
-    const menuItemKeyList = menuItemContent.keys();
-    const menuTitle = queryCatalogue( menuState.menuState, subCategories, menuState.subMenuState, "subCategoryName" );
+    console.log(queryCatalogue(menuState.menuState, 'subCategories', menuState.subMenuState, 'content' ))
+    const menuItemContent = queryCatalogue(menuState.menuState, 'subCategories', menuState.subMenuState, 'content' );
+    const menuItemKeyList = Object.keys(menuItemContent);
+    console.log(menuItemKeyList);
+    const menuTitle = queryCatalogue( menuState.menuState, 'subCategories', menuState.subMenuState, "subCategoryName" );
     const menuStateTitle = queryCatalogue( menuState.menuState, "CategoryName");
-    function menuItems () {
-        while (menuItemId <= menuItemKeyList.length()) {
-            MenuItem();
-        } 
-    }
+    const cartTotal = cartState.total;
     return(
         <div className = "menu-container">
             <div className = "menu-header">
                 <div id = 'menu-state-title'> { menuStateTitle } </div>
                 <div className = 'menu-nav-container'>
-                    { MenuNav }
+                    < MenuNav />
                 </div>
                 <div className = "menu-container-title">
                     <h1> { menuTitle } </h1>
@@ -36,7 +31,7 @@ function MenuContainer() {
             </div>
             <div className = "menu-content">
                 <div className = "menu-item-container">
-                    { menuItems }
+                    < MenuItem />
                 </div>
                 <div className = "featured-image-wrapper">
                     <img src="context sensitive images"></img>
@@ -47,7 +42,7 @@ function MenuContainer() {
                 <p>Thank you so much for visiting us!</p>
                 </div>
                 <div id = "cart=modal-wrapper"></div>
-                <div id = 'total-price-container'>{cartState.total}</div>
+                <div id = 'total-price-container'>{cartTotal}</div>
             </div>
         </div>
     

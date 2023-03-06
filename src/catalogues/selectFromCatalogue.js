@@ -5,26 +5,58 @@ const masterCatalogue = {
             introduction : {
                 subCategoryName : "Introduction",
                 contentHeader : 'Our Vision',
-                content : 'Our vision is to be the friendliest and most current internet cafe in all of Kansas. Our founder, Chase Coble, started this internet cafe to increase community support for the computer sciences in Salina as well as utilizing his three great passions; Computer Sciences, Culinary Arts, and Family! We are here to make you feel like family, learn like students, and eat like gourmets!'
-                },
+                content : {
+                    soleValue : {
+                        name : 'Mission Statement',
+                        price : '', 
+                        desc : 'Our vision is to be the friendliest and most current internet cafe in all of Kansas. Our founder, Chase Coble, started this internet cafe to increase community support for the computer sciences in Salina as well as utilizing his three great passions; Computer Sciences, Culinary Arts, and Family! We are here to make you feel like family, learn like students, and eat like gourmets!'
+                    }
+                }
+            },
             contactHours : {
                 subCategoryName : "Hours and Contact Information",
                 contentHeader : 'Contact Information and Hours',
                 content : {  
-                    contactContent : 'CobleXCafe <br> 555 Walnut Ave <br> Salina, KS 67401 <br> 785-555-5555 <br> coblexcafe@gmail.com',
-                    hoursContent :  ['Sunday : 4am - 12am <br> Monday : 4am - 12am <br> Tuesday : 4am - 12am <br> Wednesday : 4am - 12am <br> Thursday : 4am - 12am <br> Friday - Saturday : 430am Friday - 2am Sunday ']
-                    }
+                    contactContent : {
+                        name : "Contact Us",
+                        price : '',
+                        desc : 'CobleXCafe <br> 555 Walnut Ave <br> Salina, KS 67401 <br> 785-555-5555 <br> coblexcafe@gmail.com' 
+                    },
+                    hoursContent : {
+                        name : "Hours and Events",
+                        price : '',
+                        desc : 'Sunday : 4am - 12am <br> Monday : 4am - 12am <br> Tuesday : 4am - 12am <br> Wednesday : 4am - 12am <br> Thursday : 4am - 12am <br> Friday - Saturday : 430am Friday - 2am Sunday' 
+                    }  
+                }
             },
             staff : {
                 subCategoryName : "Our Staff",
                 contentHeader : 'Our Staff',
-                content : 'Placeholder for sixmodals'
+                content : {
+                    soleValue : {
+                        name : "Our Staff",
+                        price : '',
+                        desc : 'Placeholder for sixmodals'
+                    }
+                }    
             },
         },
     },
     breakfast : {
         categoryName : 'Breakfast',
         subCategories : {
+            introduction : { 
+                subCategoryName : 'Introduction',
+                contentHeader : 'Introduction',
+                contentDesc : 'Our breakfast is prepared fresh every morning to facilitate the best possible start to your day!',
+                content : {
+                    soleValue : {
+                        name : "Introduction",
+                        price : '',
+                        desc: "Breakfast is served all day, and prepared on the spot after 11am to ensure maximum flavour and freshness"
+                    }
+                }
+                },
             specials : {
                 subCategoryName : 'Specials',
                 contentHeader : 'Specials',
@@ -324,11 +356,10 @@ const queryCatalogue = function queryCatalogue(menuState, subMenuStateClassifica
         case 2 : 
             selectedCatalogue = masterCatalogue[menuState][subMenuStateClassification]
             break;
-        case 1 : selectedCatalogue = "Error Report in Console"
-            console.log("Non Substantive Entry")
+        case 1 : selectedCatalogue = masterCatalogue[menuState]
             break;
-        case 0 : selectedCatalogue = "Error Report in Console"
-            console.log('queryCatalogue Error')
+        case 0 : selectedCatalogue = masterCatalogue
+            console.log('Possible query catalogue Error')
             break;
         default : console.log('queryCatalogue Default Error')
         }
