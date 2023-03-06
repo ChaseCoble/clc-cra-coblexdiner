@@ -17,16 +17,16 @@ function MenuItem() {
     function handleClick(clickedItem) {
         dispatch(addItem(clickedItem.dataset.name));
         dispatch(addCost(clickedItem.dataset.price));
-        dispatch(updateChatSubCategoryState(menuState.subMenuState))
+        dispatch(updateChatSubCategoryState(menuState.subMenuState));
     }
 
     const menuItems = menuItemKeyList.map((key) => {
         const menuItemQuery = queryCatalogue(menuState.menuState, 'subCategories', menuState.subMenuState, 'content', key);
         const menuItemName = menuItemQuery.name;
         const menuItemDesc = menuItemQuery.desc;
-        var menuItemPrice = '';
-        if (typeof menuItemQuery.price === 'number') {
-            menuItemPrice = '$' + menuItemQuery.price.toString();
+        var menuItemPrice = 0;
+        if (menuItemQuery.price !== 0) {
+            menuItemPrice = '$' + menuItemQuery.price.toFixed(2);
             return (
                 <div key={key} className="menu-item-container">
                     <div className="menu-item-name">{menuItemName}</div>
@@ -36,11 +36,9 @@ function MenuItem() {
                 </div>
             );
         } else {
-            menuItemPrice = ''
             return (
                 <div key={key} className="menu-item-container">
                     <div className="menu-item-name">{menuItemName}</div>
-                    <div className="menu-item-price">{menuItemPrice}</div>
                     <div className="menu-item-desc">{menuItemDesc}</div>
                 </div>
             );

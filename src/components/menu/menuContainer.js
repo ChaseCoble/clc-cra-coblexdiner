@@ -17,7 +17,7 @@ function MenuContainer() {
     console.log(menuItemKeyList);
     const menuTitle = queryCatalogue( menuState.menuState, 'subCategories', menuState.subMenuState, "subCategoryName" );
     const menuStateTitle = queryCatalogue( menuState.menuState, "CategoryName");
-    const cartTotal = cartState.total;
+    const cartTotal = '$' + (cartState.total).toFixed(2);
     return(
         <div className = "menu-container">
             <div className = "menu-header">

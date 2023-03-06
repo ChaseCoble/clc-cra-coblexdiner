@@ -100,8 +100,7 @@ const chatbotVocabulary = {
 
     function selectChatbotDialogue(menuChatState, subMenuChatState) {
         const selectedChat = chatbotVocabulary[menuChatState][subMenuChatState];
-        const selectedChatLength = selectedChat.length;
-        const randomChatString = selectedChat[Math.floor(Math.random()*selectedChatLength)];
+        const randomChatString = selectedChat[Math.floor(Math.random()*selectedChat.length)];
             return (randomChatString)
     }
     

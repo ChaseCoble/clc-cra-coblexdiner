@@ -8,7 +8,7 @@ const masterCatalogue = {
                 content : {
                     soleValue : {
                         name : 'Mission Statement',
-                        price : '', 
+                        price : 0, 
                         desc : 'Our vision is to be the friendliest and most current internet cafe in all of Kansas. Our founder, Chase Coble, started this internet cafe to increase community support for the computer sciences in Salina as well as utilizing his three great passions; Computer Sciences, Culinary Arts, and Family! We are here to make you feel like family, learn like students, and eat like gourmets!'
                     }
                 }
@@ -19,12 +19,12 @@ const masterCatalogue = {
                 content : {  
                     contactContent : {
                         name : "Contact Us",
-                        price : '',
+                        price : 0,
                         desc : 'CobleXCafe <br> 555 Walnut Ave <br> Salina, KS 67401 <br> 785-555-5555 <br> coblexcafe@gmail.com' 
                     },
                     hoursContent : {
                         name : "Hours and Events",
-                        price : '',
+                        price : 0,
                         desc : 'Sunday : 4am - 12am <br> Monday : 4am - 12am <br> Tuesday : 4am - 12am <br> Wednesday : 4am - 12am <br> Thursday : 4am - 12am <br> Friday - Saturday : 430am Friday - 2am Sunday' 
                     }  
                 }
@@ -35,7 +35,7 @@ const masterCatalogue = {
                 content : {
                     soleValue : {
                         name : "Our Staff",
-                        price : '',
+                        price : 0,
                         desc : 'Placeholder for sixmodals'
                     }
                 }    
@@ -52,11 +52,11 @@ const masterCatalogue = {
                 content : {
                     soleValue : {
                         name : "Introduction",
-                        price : '',
+                        price : 0,
                         desc: "Breakfast is served all day, and prepared on the spot after 11am to ensure maximum flavour and freshness"
                     }
                 }
-                },
+            },
             specials : {
                 subCategoryName : 'Specials',
                 contentHeader : 'Specials',
@@ -128,6 +128,18 @@ const masterCatalogue = {
     lunch : {
         categoryName : 'Lunch',
         subCategories : {
+            introduction : { 
+                subCategoryName : 'Introduction',
+                contentHeader : 'Introduction',
+                contentDesc : 'Our lunch is based on a creative approach to different fusions, so no matter what you are craving, we have it ready fresh for you.',
+                content : {
+                    soleValue : {
+                        name : "Introduction",
+                        price : 0,
+                        desc: "Our lunch is beautifully prepared to fulfill all your needs to boost you through the second half of your day!"
+                    }
+                }
+            },
             specials : {
                 subCategoryName : 'Specials',
                 contentHeader : 'Specials',
@@ -199,6 +211,18 @@ const masterCatalogue = {
     dinner : {
         categoryName : 'Dinner', 
         subCategories : {
+            introduction : { 
+                subCategoryName : 'Introduction',
+                contentHeader : 'Introduction',
+                contentDesc : "Our dinner portion of the day is designed to relax and soothe you after a hard day's work",
+                content : {
+                    soleValue : {
+                        name : "Introduction",
+                        price : 0,
+                        desc: "Enjoy dinner with our live music and classy ambiance."
+                    }
+                }
+            },
             specials : {
                 subCategoryName : 'Specials',
                 contentHeader : 'Specials',
@@ -270,6 +294,18 @@ const masterCatalogue = {
     services : {
         categoryName : 'Services',
         subCategories : {
+            introduction : { 
+                subCategoryName : 'Introduction',
+                contentHeader : 'Introduction',
+                contentDesc : 'Our services are provided for those who want to build their lives up through technology.',
+                content : {
+                    soleValue : {
+                        name : "Introduction",
+                        price : 0,
+                        desc: "Most of our services are negotiable. Our owner wants to help everyone so feel free to schedule a meeting with him to discuss terms for our services"
+                    }
+                }
+            },
             devices : {
                 subCategoryName : "Device Rentals",
                 contentHeader : "Device Rental Services",

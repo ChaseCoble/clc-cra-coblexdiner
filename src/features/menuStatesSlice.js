@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import selectChatbotDialogue from "../catalogues/selectChatbotDialogue";
 
 
 const initialState = {
@@ -27,6 +28,7 @@ const menuSlice = createSlice({
             state.chatMenuState = action.payload;
         },
         updateChatSubCategoryState : ( state, action ) => {
+            state.chatSubCategoryState = '';
             state.chatSubCategoryState = action.payload;
         },
         incrementTabId : (state) => {

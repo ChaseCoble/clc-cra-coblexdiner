@@ -15,7 +15,6 @@ function dtApp() {
             <div id = "dtApp-content">
                 <ChatBot />
                 <MenuContainer />
-                Chatbot
             </div>
             <div id = "dtApp-footer">
                 <div id = "dtApp-contact-wrapper"> Contact Information </div>
