@@ -15,8 +15,10 @@ function MenuItem() {
     console.log(menuItemKeyList);
 
     function handleClick(clickedItem) {
+        const priceDataString = clickedItem.dataset.price
+        const priceFloat = parseFloat(priceDataString);
         dispatch(addItem(clickedItem.dataset.name));
-        dispatch(addCost(clickedItem.dataset.price));
+        dispatch(addCost(priceFloat));
         dispatch(updateChatSubCategoryState(menuState.subMenuState));
     }
 

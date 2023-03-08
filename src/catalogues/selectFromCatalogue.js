@@ -33,10 +33,30 @@ const masterCatalogue = {
                 subCategoryName : "Our Staff",
                 contentHeader : 'Our Staff',
                 content : {
-                    soleValue : {
-                        name : "Our Staff",
+                    owner : {
+                        name : "Chase Coble, Owner",
                         price : 0,
-                        desc : 'Placeholder for sixmodals'
+                        desc : 'Our owner is a Web Developer with a passion for food, family and teaching. He launched the business to his vision and wants outreach to expand so others may have the options being a developer afforded him.'
+                    },
+                    manager : {
+                        name : "Jenny Coble, Co-Owner",
+                        price : 0,
+                        desc : 'The co-owner is the beautiful woman you see cleaning and guiding the staff in their duties. She is very loving and open and if you have any concerns do not hesitate to let her know!'
+                    },
+                    headcook : {
+                        name : "Ben Coble, Head Cook",
+                        price : 0,
+                        desc : "The head cook is the owner's eldest son, and has been cooking since he was seven. He is passionate to serve good food, so if you have any recommendations, feel out a contact card for him!"
+                    },
+                    techstaff : {
+                        name : "Kayden and Eithan Coble, Technical Staff",
+                        price : 0,
+                        desc: "Kayden and Eithan are the owner's middle sons. You will see them assisting with the services section of the restaurant, aiding in the tutoring, teaching, and upkeep of the computers and their peripherals"
+                    },
+                    maitrede : {
+                        name : "Eli Coble, Maitre d' and Host ",
+                        price : 0,
+                        desc: "Eli is the Maitre d' and Host, he loves nothing more than helping people be happy and comfortable!"
                     }
                 }    
             },

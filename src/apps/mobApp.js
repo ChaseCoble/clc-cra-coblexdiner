@@ -1,6 +1,11 @@
-import React from 'react';
+import React , { useState } from 'react';
+import MenuContainer from '../components/menu/menuContainer'
+import NavBar from '../components/navBar'
+import ChatBot from '../components/chatbot'
+import ReactModal from 'react-modal';
 
-function mobApp() {
+function MobApp() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return(
         <div id = "mobApp-container">
             <div id = "mobApp-header">
@@ -9,24 +14,24 @@ function mobApp() {
                 </div>
             </div>
             <div id = "mobApp-navbar">
-                'Navbar(Shared)''
+                <NavBar />
             </div>
             <div id = "mobApp-menu-container">
-                MenuContainer
+                <MenuContainer/>            
             </div>
             <div id = "mobApp-bottom-row">
-                <div id = "cart-modal-wrapper">
-                    CartModal
-                </div>
-                <div id = "mobApp-price-wrapper">
-                    State Managed Price Total
-                </div>
                 <div id = "mobApp-chatbot-modal-wrapper">
-                    ChatBotModal
+                <button onClick={() => setIsModalOpen(true)}>Chat with a seemingly real Server!</button>
+            <ReactModal 
+                isOpen={isModalOpen}
+                shouldCloseOnOverlayClick={true}
+                onRequestClose={() => setIsModalOpen(false)}>
+                    <ChatBot />
+            </ReactModal>
                 </div>
             </div>
         </div>
     )
 }
 
-export default mobApp;
+export default MobApp;

@@ -17,6 +17,7 @@
     "redux-persist": "^6.0.0",
     "redux-persist-cookie-storage": "^1.0.0",
     "thunk": "^0.0.1",
+    "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
