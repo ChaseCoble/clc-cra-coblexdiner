@@ -4,13 +4,12 @@ import { v4 as uuidv4 } from 'uuid';
 import { clearCart } from '../../features/cartSlice';
 import { updateChatMenuState, updateChatSubCategoryState, updateMenuState, updateSubMenuState } from '../../features/menuStatesSlice';
 import ReactModal from 'react-modal';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 function Cart() {
-    console.log("Cart Mounted");
+    const cartIcon = <FontAwesomeIcon onClick={() => setIsModalOpen(true)} icon = { faShoppingCart } />
     const cartState = useSelector((state) => state.cartState);
-    const menuState = useSelector((state) => state.menuState)
-    console.log(cartState.price);
-    console.log(cartState.cartItems);
+    const menuState = useSelector((state) => state.menuState);
     const dispatch = useDispatch();
     const [isModalOpen, setIsModalOpen] = useState(false);
     function cartItemObject(array1, array2) {
@@ -78,7 +77,7 @@ function Cart() {
       
     return (
         <div className = 'cart-modal-wrapper'>
-            <button onClick={() => setIsModalOpen(true)}>Open Cart</button>
+            {cartIcon}
             <ReactModal 
                 isOpen={isModalOpen}
                 shouldCloseOnOverlayClick={true}

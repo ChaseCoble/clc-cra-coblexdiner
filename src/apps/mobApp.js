@@ -3,6 +3,7 @@ import MenuContainer from '../components/menu/menuContainer'
 import NavBar from '../components/navBar'
 import ChatBot from '../components/chatbot'
 import ReactModal from 'react-modal';
+import  logo  from "../helpers/images/logo.jpg";
 
 function MobApp() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +11,7 @@ function MobApp() {
         <div id = "mobApp-container">
             <div id = "mobApp-header">
                 <div id = "mobApp-logo">
-                    Logo
+                    <img src = { logo } alt = "Coble X Diner" />
                 </div>
             </div>
             <div id = "mobApp-navbar">

@@ -1,0 +1,30 @@
+@import './variables.scss';
+.chat-wrapper{
+    margin-top : 10px;
+    height: 100%;
+    background-color : $greywhite;
+    #chat-helper{
+        height: 30.4vh;
+    }
+}
+#chat-header-wrapper{
+    display: flex;
+    flex-direction: row;
+    font-size : .5em;
+}
+#chat-thumbnail-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{ 
+        width: 5vw;
+    }     
+}
+#chat-precontent-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items : center;
+}
+.chat-content-wrapper{
+    margin: 5px;
+}

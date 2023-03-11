@@ -1,9 +1,8 @@
 import { queryCatalogue } from "../../catalogues/selectFromCatalogue"
 import { useSelector, useDispatch } from "react-redux";
-import { updateSubMenuState , updateChatSubCategoryState } from "../../features/menuStatesSlice";
+import { updateSubMenuState } from "../../features/menuStatesSlice";
 
 function MenuNav() {
-    console.log("MenuNav mounted");
     const menuState = useSelector((state) => state.menuState);
     const dispatch = useDispatch();
     const subCategories = queryCatalogue(menuState.menuState, "subCategories")
@@ -21,7 +20,7 @@ function MenuNav() {
         return (
             <div
                 key={key}
-                className={`menu-tab ${menuState.subMenuState === key ? 'selected-tab' : ''}`}
+                className={`menu-tab ${menuState.subMenuState === key ? 'selected-tab' : ''} nav-tab`}
                 onClick={() => handleOnClick(tabData)}
                 data-sub-menustate={tabData}
             >
@@ -30,7 +29,12 @@ function MenuNav() {
         );
     });
 
-    return <div>{menuTabs}</div>;
+    return ( 
+        <div id = "menu-tab-wrapper">
+            {menuTabs}
+            <div id = "menu-tab-filler"></div>
+        </div>
+    )
 }
 
 export default MenuNav;

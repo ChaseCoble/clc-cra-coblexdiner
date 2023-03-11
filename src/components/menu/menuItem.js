@@ -7,12 +7,10 @@ import { updateChatSubCategoryState } from "../../features/menuStatesSlice";
  
 
 function MenuItem() {
-    console.log("MenuItem mounted");
     const menuState = useSelector((state) => state.menuState);
     const menuItemContent = queryCatalogue(menuState.menuState, 'subCategories', menuState.subMenuState, 'content' );
     const menuItemKeyList = Object.keys(menuItemContent);
     const dispatch = useDispatch();
-    console.log(menuItemKeyList);
 
     function handleClick(clickedItem) {
         const priceDataString = clickedItem.dataset.price
@@ -29,25 +27,56 @@ function MenuItem() {
         var menuItemPrice = 0;
         if (menuItemQuery.price !== 0) {
             menuItemPrice = '$' + menuItemQuery.price.toFixed(2);
-            return (
-                <div key={key} className="menu-item-container">
-                    <div className="menu-item-name">{menuItemName}</div>
-                    <div className="menu-item-price">{menuItemPrice}</div>
-                    <div className="menu-item-desc">{menuItemDesc}</div>
-                    <button className="btn buy-btn" data-name={menuItemName} data-price={menuItemQuery.price} onClick={(e) => handleClick(e.currentTarget)}>Purchase</button>
-                </div>
-            );
+            if ( Array.isArray(menuItemDesc) !== true ) {
+                return (
+                    <div key={key} className="menu-item-container">
+                        <div className="menu-item-name">{menuItemName}</div>
+                        <div className="menu-item-price">{menuItemPrice}</div>
+                        <div className="menu-item-desc">{menuItemDesc}</div>
+                        <button className="btn buy-btn" data-name={menuItemName} data-price={menuItemQuery.price} onClick={(e) => handleClick(e.currentTarget)}>Purchase</button>
+                    </div>
+                );
+            } else {
+                return (
+                    <div key={key} className="menu-item-container">
+                        <div className="menu-item-name">{menuItemName}</div>
+                        <div className="menu-item-price">{menuItemPrice}</div>
+                        <div className="menu-item-desc">
+                            <ul style={{ listStyleType: 'none'}}>
+                                {menuItemDesc.map((item, index) => (
+                                <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <button className="btn buy-btn" data-name={menuItemName} data-price={menuItemQuery.price} onClick={(e) => handleClick(e.currentTarget)}>Purchase</button>
+                    </div>
+                );  
+            }
         } else {
-            return (
-                <div key={key} className="menu-item-container">
-                    <div className="menu-item-name">{menuItemName}</div>
-                    <div className="menu-item-desc">{menuItemDesc}</div>
-                </div>
-            );
-        }
+            if ( Array.isArray(menuItemDesc) !== true ) {
+                return (
+                    <div key={key} className="menu-item-container">
+                        <div className="menu-item-name">{menuItemName}</div>
+                        <div className="menu-item-desc">{menuItemDesc}</div>
+                    </div>
+                );
+            } else {
+                return (
+                    <div key={key} className="menu-item-container">
+                        <div className="menu-item-name">{menuItemName}</div>
+                        <div className="menu-item-desc">
+                            <ul style={{ listStyleType: 'none'}}>
+                                {menuItemDesc.map((item, index) => (
+                                <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                )
+            }
+        };
     });
-
-    return <div>{menuItems}</div>;
+    return <div id= 'menu-item-content-wrapper'>{menuItems}</div>;
 }
 
 export default MenuItem;

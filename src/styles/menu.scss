@@ -1,0 +1,150 @@
+@import "./variables.scss";
+
+.menu-container {
+    height: 100%;
+    background: $papyrus;
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+    margin: 20px;
+
+
+  .menu-header {
+    .menu-nav-container {
+      #menu-tab-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        #menu-tab-filler {
+          border-bottom: 2px solid black;
+          width: 100%;
+          border-left: 2px solid black;
+          background-color: $greywhite;
+        }
+
+        .menu-tab {
+          @include centered;
+          background-color: $shaded-papyrus;
+          border: 2px solid black;
+          border-right: 2px transparent;
+          width: 20vw;
+
+          &.selected-tab {
+            border-bottom: $papyrus;
+            background-color: $papyrus;
+          }
+        }
+      }
+    }
+  }
+
+  #menu-box-wrapper {
+    display: flex;
+    flex-direction: row;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    background-color: $papyrus;
+    height: 100%;
+
+    #menu-left-column {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 50%;
+      justify-content: center;
+
+      .menu-container-title {
+        display: flex;
+        padding-left: 20px;
+        height: 20%;
+      }
+
+      .menu-content {
+        @include centered;
+        flex-direction: row;
+        height: 50vh;
+        width: 100%;
+        overflow: auto;
+
+        .menu-item-wrapper {
+          @include centered;
+          padding: 10px;
+          height: 90%;
+
+          #menu-item-content-wrapper {
+            height: 100%;
+            padding: 10px;
+
+            .menu-item-container {
+              @include centered;
+              flex-direction: column;
+              padding: 5px;
+
+              .menu-item-name {
+                font-weight: bold;
+                font-size: 1.1em;
+              }
+
+              .menu-item-price {
+                font-style: oblique;
+              }
+              .menu-item-desc {
+                @include centered;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #menu-right-column {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      .featured-image-wrapper {
+        @include centered;
+        width: 100%;
+        height: 100%;
+
+        #featured-image {
+          @include centered;
+          width: 80%;
+          height: 80%;
+
+          img {
+            display: block;
+            width: 100%;
+            max-height: 100%;
+            object-fit: fill;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  .menu-footer{
+    height: 100%;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-left:  2px solid black;
+    border-right: 2px solid black;
+    padding-bottom: 10%;
+    #greeting{
+        width: 33%;
+        @include centered;
+    }
+    #cart-wrapper{
+        @include centered;
+        flex-direction: column;
+        .cart-modal-wrapper{
+            color: blue;
+            font-size: 2em;
+        }
+        .cart-total{
+            font-weight: bold;
+        }
+    }
+  }
+}

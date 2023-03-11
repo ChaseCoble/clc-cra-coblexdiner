@@ -3,57 +3,40 @@ import MenuNav from "./menuNav";
 import MenuItem from "./menuItem";
 import Cart from "./cart";
 import CartTotal from "./cartTotal";
+import FeaturedImage from "./featuredImage";
 import { queryCatalogue } from "../../catalogues/selectFromCatalogue";
 import { useSelector } from "react-redux";
 
 function MenuContainer() {
-  const cartState = useSelector((state) => state.cartState);
   const menuState = useSelector((state) => state.menuState);
-  console.log(menuState.menuState);
-  console.log(cartState.price);
-  console.log(menuState.subMenuState);
-  console.log(
-    queryCatalogue(
-      menuState.menuState,
-      "subCategories",
-      menuState.subMenuState,
-      "content"
-    )
-  );
-  const menuItemContent = queryCatalogue(
-    menuState.menuState,
-    "subCategories",
-    menuState.subMenuState,
-    "content"
-  );
-  const menuItemKeyList = Object.keys(menuItemContent);
-  console.log(menuItemKeyList);
   const menuTitle = queryCatalogue(
     menuState.menuState,
     "subCategories",
     menuState.subMenuState,
     "subCategoryName"
   );
-  const menuStateTitle = queryCatalogue(menuState.menuState, "CategoryName");
-  
-
   return (
     <div className="menu-container">
       <div className="menu-header">
-        <div id="menu-state-title"> {menuStateTitle} </div>
         <div className="menu-nav-container">
           <MenuNav />
         </div>
-        <div className="menu-container-title">
-          <h1> {menuTitle} </h1>
-        </div>
       </div>
-      <div className="menu-content">
-        <div className="menu-item-container">
-          <MenuItem />
+      <div id = "menu-box-wrapper">
+        <div id = 'menu-left-column'>
+          <div className="menu-container-title">
+            <h1> {menuTitle} </h1>
+          </div>
+          <div className="menu-content">
+            <div className="menu-item-wrapper">
+              <MenuItem />
+            </div>
+          </div>
         </div>
-        <div className="featured-image-wrapper">
-          <img src="context sensitive images"></img>
+        <div id = "menu-right-column">
+          <div className="featured-image-wrapper">
+            < FeaturedImage />
+          </div>
         </div>
       </div>
       <div className="menu-footer">

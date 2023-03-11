@@ -12,7 +12,6 @@ function NavBar() {
     const handleOnClick = (navEntryData) => {
         dispatch(updateMenuState(navEntryData));
         dispatch(updateChatMenuState(navEntryData));
-        console.log(menuState.chatMenuState + "is the updated Chat Menu State");
         dispatch(updateChatSubCategoryState('introduction'));
         dispatch(updateSubMenuState("introduction"))
     };
@@ -24,16 +23,16 @@ function NavBar() {
         return (
             <div
                 key={key}
-                className={`menu-tab ${menuState.menuState === key ? 'selected-tab' : ''}`}
+                className={`nav-tab ${menuState.menuState === key ? 'selected-nav-tab' : ''}`}
                 onClick={() => handleOnClick(navData)}
                 data-sub-menu-state={navData}
             >
-                {navContent}
+                <p>{navContent}</p>
             </div>
         );
     });
 
-    return <div>{navEntries}</div>;
+    return <div id = 'nav-bar-wrapper'>{navEntries}</div>;
 }
 
 export default NavBar;

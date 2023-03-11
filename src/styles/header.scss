@@ -1,0 +1,28 @@
+@import './variables.scss';
+#dtApp-header{
+    display : flex;
+    flex-direction : row ;
+    justify-content : space-between;
+    align-items : center ;
+    height: 3%;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    background-color: $greywhite;
+    #dtApp-logo, #mobApp-logo{
+        @include centered;
+        padding-top: 10px;
+        padding-left: 40px;
+
+        img {
+            width: 80px;
+            margin-top: 15px;
+        }
+    }
+    #dtApp-motto{
+        width: 10%;
+        @include centered;
+        padding-top: 5px;
+        object-fit: scale-down;
+        flex-wrap: wrap;
+    }
+}

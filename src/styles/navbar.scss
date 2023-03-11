@@ -1,0 +1,26 @@
+@import './variables.scss';
+#dtApp-navbar-wrapper{
+    height: 8%;
+}
+#nav-bar-wrapper{
+    display : flex;
+    flex-direction : row;
+    padding: 3px;
+    justify-content : space-around;
+    align-items: center;
+    height: 100%;
+    background-color : $papyrus;
+    margin-bottom : 10px;
+    border: 1px solid grey;
+    .nav-tab{
+        height: 100%;
+        padding : 3px;
+        p{
+            color: black;
+        }
+    }
+    .selected-nav-tab{
+        height: 80%;
+        border: 1px solid black;
+    }
+}

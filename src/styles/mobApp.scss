@@ -1,0 +1,12 @@
+#mobApp-logo{
+        @include centered;
+        padding-top: 1vh;
+        padding-left: 1vw;
+        padding-bottom: 1vh;
+
+        img {
+            width: 25vw;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+}

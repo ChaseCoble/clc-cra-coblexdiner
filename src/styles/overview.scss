@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+body{
+    background-color: $greywhite;
+    height: 100%;
+}
+
+#dtApp-content{
+    display: flex;
+    flex-direction: row;
+    background-color: $greywhite;
+    padding-bottom: 3px;
+    height: 100%;
+}
+
+#dtapp-container{
+    height: 100%;
+}
+#root{
+    height: 100%;
+
+}
+

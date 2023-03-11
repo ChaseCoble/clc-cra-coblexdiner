@@ -1,8 +1,7 @@
-import mobApp from './apps/mobApp';
-import dtApp from './apps/dtApp';
+import MobApp from './apps/mobApp';
+import DtApp from './apps/dtApp';
+import './main.scss';
 
-const mobAppVar = mobApp();
-const dtAppVar = dtApp();
 
 function DeviceFork() { 
   function vpdetect() {
@@ -19,9 +18,13 @@ function DeviceFork() {
     }
   }
   if (vpdetect() === true) {
-    return mobAppVar
+    return (
+        < MobApp />
+    )
     } else {
-    return dtAppVar
+    return (
+        < DtApp />
+    )
     };    
 }
 

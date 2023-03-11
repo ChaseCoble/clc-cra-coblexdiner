@@ -17,7 +17,7 @@ function CartTotal() {
 
   console.log("cartState:", cartState);
 
-  return <div>${calculateTotal().toFixed(2)}</div>;
+  return <div className = 'cart-total'>${calculateTotal().toFixed(2)}</div>;
 }
 
 export default CartTotal;

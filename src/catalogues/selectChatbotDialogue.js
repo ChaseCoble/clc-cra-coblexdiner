@@ -5,7 +5,7 @@ const chatbotVocabulary = {
             staff : ["Feel free to learn all you want about my sweet little human companions"]
         },
         breakfast : {
-            introduction : ['The Bootup breakfast selection! What a wonderful choice! <br> Enjoy uploading these dishes to your BIOS! ...Erm I mean your biological processes...<br> Oh boy... Just try the Byscuits and Gravy, its a Coble family recipe!'],
+            introduction : ['The Bootup breakfast selection! What a wonderful choice! Enjoy uploading these dishes to your BIOS! ...Erm I mean your biological processes... Oh boy... Just try the Byscuits and Gravy, its a Coble family recipe!'],
             specials : [
                 'What an invigorating breakfast!',
                 'That is my favorite thing to eat in the morning!',

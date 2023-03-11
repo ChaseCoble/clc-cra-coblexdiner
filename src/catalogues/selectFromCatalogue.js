@@ -5,6 +5,7 @@ const masterCatalogue = {
             introduction : {
                 subCategoryName : "Introduction",
                 contentHeader : 'Our Vision',
+                featuredImageSrc : '/featured images/about-us/introduction/aboutusintroduction.jpg',
                 content : {
                     soleValue : {
                         name : 'Mission Statement',
@@ -14,24 +15,26 @@ const masterCatalogue = {
                 }
             },
             contactHours : {
-                subCategoryName : "Hours and Contact Information",
-                contentHeader : 'Contact Information and Hours',
+                subCategoryName : "Contact Information",
+                contentHeader : 'Contact Information ',
+                featuredImageSrc : '/featured images/about-us/contact/aboutuscontact.jpg',
                 content : {  
                     contactContent : {
                         name : "Contact Us",
                         price : 0,
-                        desc : 'CobleXCafe <br> 555 Walnut Ave <br> Salina, KS 67401 <br> 785-555-5555 <br> coblexcafe@gmail.com' 
+                        desc : ['CobleXCafe', '555 Walnut Ave', 'Salina, KS 67401', '785-555-5555', 'coblexcafe@gmail.com'], 
                     },
                     hoursContent : {
                         name : "Hours and Events",
                         price : 0,
-                        desc : 'Sunday : 4am - 12am <br> Monday : 4am - 12am <br> Tuesday : 4am - 12am <br> Wednesday : 4am - 12am <br> Thursday : 4am - 12am <br> Friday - Saturday : 430am Friday - 2am Sunday' 
+                        desc : ['Sunday : 4am - 12am', 'Monday : 4am - 12am', 'Tuesday : 4am - 12am', 'Wednesday : 4am - 12am', 'Thursday : 4am - 12am', 'Friday - Saturday : 430am Friday - 2am Sunday'], 
                     }  
                 }
             },
             staff : {
                 subCategoryName : "Our Staff",
                 contentHeader : 'Our Staff',
+                featuredImageSrc : '/featured images/about-us/staff/aboutusstaff.jpg',
                 content : {
                     owner : {
                         name : "Chase Coble, Owner",
@@ -68,10 +71,11 @@ const masterCatalogue = {
             introduction : { 
                 subCategoryName : 'Introduction',
                 contentHeader : 'Introduction',
+                featuredImageSrc : '/featured images/breakfast/introduction/breakfastintroduction.jpg',
                 contentDesc : 'Our breakfast is prepared fresh every morning to facilitate the best possible start to your day!',
                 content : {
                     soleValue : {
-                        name : "Introduction",
+                        name : "Boot Up Breakfast",
                         price : 0,
                         desc: "Breakfast is served all day, and prepared on the spot after 11am to ensure maximum flavour and freshness"
                     }
@@ -80,6 +84,7 @@ const masterCatalogue = {
             specials : {
                 subCategoryName : 'Specials',
                 contentHeader : 'Specials',
+                featuredImageSrc : '/featured images/breakfast/specials/breakfastspecials.jpg',
                 contentDesc : 'All our specials are renowned by all that have tasted them. Our head cook has been making Loaded Biscuits and Gravy since he was 8 years old! A recipe perfected over time! The Stuffed French Toast is exquisite and the pancake platter is just what you need to start your day!',
                 content : {
                     special1 : {
@@ -102,6 +107,7 @@ const masterCatalogue = {
             sides : {
                 subCategoryName : 'Sides',
                 contentHeader : 'Sides',
+                featuredImageSrc : '/featured images/breakfast/sides/breakfastsides.jpg',
                 contentDesc : 'Our sides are expertly selected to complement our specials and maximize your enjoyment!',
                 content : {
                     side1 : {
@@ -124,22 +130,23 @@ const masterCatalogue = {
             beverages : {
                 subCategoryName : 'Beverages',
                 contentHeader : 'Beverages',
+                featuredImageSrc : '/featured images/breakfast/beverages/breakfastbeverages.jpg',
                 contentDesc : 'We offer several tiers of coffee drinks; Premium, Special, and Basic. Premium contains 3 or more flavors, Special contains 2 flavors, and Basic has one additional flavor. Flavors available are: Butter rum, caramel, peanut butter, chocolate, peppermint, vanilla, and cinammon.',
                 content : {
                     beverage1 : {
                         name : 'Premium Coding Coffees',
                         price : 4.99,
-                        desc : ['Any coffee containing 3 ingredients, ask about our Monkey Bananza, Caramel Crunch, and Stimulating Sunriser!',["beverageselectioncomponent"]] 
+                        desc : ['Any coffee containing 3 ingredients, ask about our Monkey Bananza, Caramel Crunch, and Stimulating Sunriser!'] 
                     },
                     beverage2 : {
                         name : 'Special Coding Coffees',
                         price : 3.99,
-                        desc : ['Any coffee containing 2 ingredients, ask about our Skinny Minty, and our Caramel Macchiato!',["beverageselectioncomponent"]] 
+                        desc : ['Any coffee containing 2 ingredients, ask about our Skinny Minty, and our Caramel Macchiato!'] 
                     },
                     beverage3 : {
                         name : 'Essential Coding Coffees',
                         price : 2.99,
-                        desc : ['A coffee with a single syrup but enough energy to fuel your productive day',['beverageselectioncomponent']] 
+                        desc : ['A coffee with a single syrup but enough energy to fuel your productive day'] 
                     }
                 }
             },
@@ -151,10 +158,11 @@ const masterCatalogue = {
             introduction : { 
                 subCategoryName : 'Introduction',
                 contentHeader : 'Introduction',
+                featuredImageSrc : '/featured images/lunch/introduction/lunchintroduction.jpg',
                 contentDesc : 'Our lunch is based on a creative approach to different fusions, so no matter what you are craving, we have it ready fresh for you.',
                 content : {
                     soleValue : {
-                        name : "Introduction",
+                        name : "Login Lunches",
                         price : 0,
                         desc: "Our lunch is beautifully prepared to fulfill all your needs to boost you through the second half of your day!"
                     }
@@ -163,6 +171,7 @@ const masterCatalogue = {
             specials : {
                 subCategoryName : 'Specials',
                 contentHeader : 'Specials',
+                featuredImageSrc : '/featured images/lunch/specials/lunchspecials.jpg',
                 contentDesc : 'Our lunches are designed to empower you through your afternoon slump and provide relaxation on your well-deserved lunch break.',
                 content: {
                     special1 : {
@@ -185,6 +194,7 @@ const masterCatalogue = {
             sides : {
                 subCategoryName : 'Sides',
                 contentHeader : 'Sides',
+                featuredImageSrc : '/featured images/lunch/sides/lunchsides.jpg',
                 contentDesc : 'Our sides are perfect to complete the meal you need to be the best you!',
                 content : {
                     side1 : {
@@ -207,22 +217,23 @@ const masterCatalogue = {
             beverages : {
                 subCategoryName : 'Beverages',
                 contentHeader : 'Beverages',
+                featuredImageSrc : '/featured images/lunch/beverages/lunchbeverages.jpg',
                 contentDesc : 'Our lunch selection of drinks include mixed sodas, artisan energy drinks, and customizable teas! Our flavour bank includes clove, cinnamon, nutmeg, seasonal fruits, and frozen fruits',
                 content: {
                     beverage1 : {
                         name : 'Artisan Energy Drinks',
                         price : 4.99,
-                        desc : ['Our artisan energy drinks include your favorite energy drinks mixed with fresh flavours.',["beverageselectioncomponent"]] 
+                        desc : ['Our artisan energy drinks include your favorite energy drinks mixed with fresh flavours.'] 
                     },
                     beverage2 : {
                         name : 'Custom Teas',
                         price : 3.99,
-                        desc : ['We have dozens of teas that you can customize with our bank of flavours',["beverageselectioncomponent"]] 
+                        desc : ['We have dozens of teas that you can customize with our bank of flavours'] 
                     },
                     beverage3 : {
                         name : 'Mixed Sodas',
                         price : 2.99,
-                        desc : ['Choose from our selection of popular sodas and a flavour from the bank to make a soda you enjoy! Chase swears by Pepsi and Rum flavoring!',["beverageselectioncomponent"]] 
+                        desc : ['Choose from our selection of popular sodas and a flavour from the bank to make a soda you enjoy! Chase swears by Pepsi and Rum flavoring!'] 
                     }
                 }
             },
@@ -234,10 +245,11 @@ const masterCatalogue = {
             introduction : { 
                 subCategoryName : 'Introduction',
                 contentHeader : 'Introduction',
+                featuredImageSrc : '/featured images/dinner/introduction/dinnerintroduction.jpg',
                 contentDesc : "Our dinner portion of the day is designed to relax and soothe you after a hard day's work",
                 content : {
                     soleValue : {
-                        name : "Introduction",
+                        name : "Defragment with Dinner",
                         price : 0,
                         desc: "Enjoy dinner with our live music and classy ambiance."
                     }
@@ -246,6 +258,7 @@ const masterCatalogue = {
             specials : {
                 subCategoryName : 'Specials',
                 contentHeader : 'Specials',
+                featuredImageSrc : '/featured images/dinner/specials/dinnerspecials.jpg',
                 contentDesc : 'Our dinner options are selected to pull yourself together after the arduous day of being pulled in so many directions! Destress, descatter, reorganize and defragment to our original or live music!',
                 content: {
                     special1 : {
@@ -268,6 +281,7 @@ const masterCatalogue = {
             sides : {
                 subCategoryName : 'Sides',
                 contentHeader : 'Sides',
+                featuredImageSrc : '/featured images/dinner/sides/dinnersides.jpg',
                 contentDesc : 'Our sides are made to relax the body and mind and prepare you for a restful evening',
                 content : {
                     side1 : {
@@ -290,22 +304,23 @@ const masterCatalogue = {
             beverages : {
                 subCategoryName : 'Beverages',
                 contentHeader : 'Beverages',
+                featuredImageSrc : '/featured images/dinner/beverages/dinnerbeverages.jpg',
                 contentDesc :  'Dinner drinks are our absolute passion to make! Our owner is the main bartender and prizes himself on his exhaustive knowledge of mixological creations! Enjoy our adult mixed drinks, our virgin editions or a good old fashioned fountain drink!',
                 content: {
                     beverage1 : {
                         name : 'Mixed Drinks',
                         price : 3.99,
-                        desc : ['Your favorite mixed drink is available here at CobleXCafe! Long Island Iced Tea, Moscow Mule, and so many more are at your disposal!',["beverageselectioncomponent"]] 
+                        desc : ['Your favorite mixed drink is available here at CobleXCafe! Long Island Iced Tea, Moscow Mule, and so many more are at your disposal!'] 
                     },
                     beverage2 : {
                         name : 'Simple Mix',
                         price : 2.99,
-                        desc : ['You enjoy a straight and a chaser or a simple Rum and Coke? This is the option for you!',["beverageselectioncomponent"]] 
+                        desc : ['You enjoy a straight and a chaser or a simple Rum and Coke? This is the option for you!'] 
                     },
                     beverage3 : {
                         name : 'Fresh Fruit Drinks',
                         price : 1.99,
-                        desc : ['Limeades, lemonades, and punches, the choice is yours! We prize our user friendly customization options! You can think it, we can make it!',["beverageselectioncomponent"]] 
+                        desc : ['Limeades, lemonades, and punches, the choice is yours! We prize our user friendly customization options! You can think it, we can make it!'] 
                     }
                 }
             },
@@ -317,10 +332,11 @@ const masterCatalogue = {
             introduction : { 
                 subCategoryName : 'Introduction',
                 contentHeader : 'Introduction',
+                featuredImageSrc : '/featured images/services/introduction/servicesintroduction.jpg',
                 contentDesc : 'Our services are provided for those who want to build their lives up through technology.',
                 content : {
                     soleValue : {
-                        name : "Introduction",
+                        name : "Skill Up with Services",
                         price : 0,
                         desc: "Most of our services are negotiable. Our owner wants to help everyone so feel free to schedule a meeting with him to discuss terms for our services"
                     }
@@ -329,6 +345,7 @@ const masterCatalogue = {
             devices : {
                 subCategoryName : "Device Rentals",
                 contentHeader : "Device Rental Services",
+                featuredImageSrc : '/featured images/services/devices/servicesdevices.jpg',
                 content : {
                     device1 : {
                         name : '3D Printing',
@@ -351,6 +368,7 @@ const masterCatalogue = {
             education : {
                 subCategoryName : 'Educational Services',
                 contentHeader : "Education Services",
+                featuredImageSrc : '/featured images/services/education/serviceseducation.jpg',
                 content : {
                     education1 : {
                         name : 'Tutoring',
@@ -372,6 +390,7 @@ const masterCatalogue = {
             offices : {
                 subCategoryName : "Office Rentals",
                 contentHeader : "Rental Offices",
+                featuredImageSrc : '/featured images/services/offices/officesservices.jpg',
                 content : {
                     offices1 : {
                         name : 'Graphics Processing Office',

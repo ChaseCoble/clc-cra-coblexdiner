@@ -1,0 +1,11 @@
+@mixin centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$theme-1: #5c32a9;
+$theme-2: #8a8a8a;
+$papyrus: #d9d696;
+$shaded-papyrus: #b1ae7c;
+$greywhite: #ebebeb;
