@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import store from './app/store';
-import DeviceFork from './DeviceFork';
+import store from '../src/redux/store';
+import DeviceFork from './viewingDeviceFork';
 import './index.css';
 import ReactModal from 'react-modal';
 

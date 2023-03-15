@@ -5,7 +5,7 @@ const chatbotVocabulary = {
             staff : ["Feel free to learn all you want about my sweet little human companions"]
         },
         breakfast : {
-            introduction : ['The Bootup breakfast selection! What a wonderful choice! Enjoy uploading these dishes to your BIOS! ...Erm I mean your biological processes... Oh boy... Just try the Byscuits and Gravy, its a Coble family recipe!'],
+            introduction : ['The Bootup breakfast selection! What a wonderful choice! Enjoy uploading these dishes to your BIOS! ...Erm I mean your biological processes... Oh boy... Just try the Biscuits and Gravy, its a Coble family recipe!'],
             specials : [
                 'What an invigorating breakfast!',
                 'That is my favorite thing to eat in the morning!',
@@ -51,7 +51,7 @@ const chatbotVocabulary = {
             ],
         }, 
         dinner : {
-            introduction : ["The Defragging dinner! Enjoy our locally produced music and chill with our astonishing collection of mixed coolants, I mean drinks, and flavorful hearty memor- I mean meals! <br> The kitchen's special of the day is the General Tso's wings!"],
+            introduction : ["The Defragging dinner! Enjoy our locally produced music and chill with our astonishing collection of mixed coolants, I mean drinks, and flavorful hearty memor- I mean meals! The kitchen's special of the day is the General Tso's wings!"],
             specials : [
                 "What a lovely end to your day",
                 "Thank you ever so kindly",

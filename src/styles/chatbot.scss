@@ -1,8 +1,12 @@
 @import './variables.scss';
 .chat-wrapper{
+    display: flex;
+    flex-direction: column;
     margin-top : 10px;
     height: 100%;
     background-color : $greywhite;
+    width: 33%;
+    margin-left: 10px;
     #chat-helper{
         height: 30.4vh;
     }

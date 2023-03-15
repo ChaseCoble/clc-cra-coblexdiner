@@ -1,16 +1,16 @@
 @import './variables.scss';
-#dtApp-header{
+#desktopApp-header{
     display : flex;
     flex-direction : row ;
     justify-content : space-between;
     align-items : center ;
-    height: 3%;
-    padding-bottom: 15px;
-    margin-bottom: 10px;
+    height: 10%;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
     background-color: $greywhite;
-    #dtApp-logo{
+    #desktopApp-logo{
         @include centered;
-        padding-top: 10px;
+        padding-top: 3px;
         padding-left: 40px;
 
         img {
@@ -18,11 +18,12 @@
             margin-top: 15px;
         }
     }
-    #dtApp-motto{
-        width: 10%;
+    #desktopApp-motto{
+        width: 20%;
         @include centered;
         padding-top: 5px;
         object-fit: scale-down;
         flex-wrap: wrap;
+        font-style: italic;
     }
 }

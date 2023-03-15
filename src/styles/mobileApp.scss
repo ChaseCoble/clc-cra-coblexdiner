@@ -1,4 +1,5 @@
-#mobApp-logo{
+@import "./variables.scss";
+#mobileApp-logo{
         @include centered;
         padding-top: 1vh;
         padding-left: 1vw;
@@ -9,4 +10,7 @@
             margin-top: 2vh;
             margin-bottom: 2vh;
         }
+}
+#mobileApp-chatbot-modal-wrapper{
+    @include centered;
 }

@@ -1,6 +1,6 @@
 import { queryCatalogue } from "../../catalogues/selectFromCatalogue"
 import { useSelector, useDispatch } from "react-redux";
-import { updateSubMenuState } from "../../features/menuStatesSlice";
+import { updateSubMenuState } from "../../redux/features/menuStatesSlice";
 
 function MenuNav() {
     const menuState = useSelector((state) => state.menuState);
@@ -20,7 +20,7 @@ function MenuNav() {
         return (
             <div
                 key={key}
-                className={`menu-tab ${menuState.subMenuState === key ? 'selected-tab' : ''} nav-tab`}
+                className={`menu-tab ${menuState.subMenuState === key ? 'selected-tab' : ''} nav-tab clickable`}
                 onClick={() => handleOnClick(tabData)}
                 data-sub-menustate={tabData}
             >

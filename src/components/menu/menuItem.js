@@ -1,8 +1,8 @@
 import React from "react";
 import { queryCatalogue } from "../../catalogues/selectFromCatalogue"
 import { useSelector, useDispatch } from "react-redux"
-import { addItem, addCost } from "../../features/cartSlice"
-import { updateChatSubCategoryState } from "../../features/menuStatesSlice";
+import { addItem, addCost } from "../../redux/features/cartSlice"
+import { updateChatSubCategoryState } from "../../redux/features/menuStatesSlice";
 
  
 

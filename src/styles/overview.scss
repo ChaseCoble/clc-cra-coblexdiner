@@ -1,11 +1,12 @@
 @import "./variables.scss";
 
+
 body{
     background-color: $greywhite;
     height: 100%;
 }
 
-#dtApp-content{
+#desktopApp-content{
     display: flex;
     flex-direction: row;
     background-color: $greywhite;
@@ -13,7 +14,7 @@ body{
     height: 100%;
 }
 
-#dtapp-container{
+#desktopApp-container{
     height: 100%;
 }
 #root{
@@ -21,3 +22,9 @@ body{
 
 }
 
+.clickable , .menu-tab, .nav-tab, .btn {
+    cursor: default;
+}
+.clickable , .menu-tab, .nav-tab, .btn :hover{
+    cursor: pointer;
+}

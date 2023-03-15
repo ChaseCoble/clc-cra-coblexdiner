@@ -1,9 +1,8 @@
 import { queryCatalogue } from "../catalogues/selectFromCatalogue"
 import { useSelector, useDispatch } from "react-redux";
-import { updateMenuState , updateChatMenuState, updateChatSubCategoryState, updateSubMenuState } from "../features/menuStatesSlice";
+import { updateMenuState , updateChatMenuState, updateChatSubCategoryState, updateSubMenuState } from "../redux/features/menuStatesSlice";
 
 function NavBar() {
-    console.log("navBar mounted");
     const menuState = useSelector((state) => state.menuState);
     const dispatch = useDispatch();
     const categories = queryCatalogue();

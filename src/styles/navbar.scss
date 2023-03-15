@@ -1,5 +1,5 @@
 @import './variables.scss';
-#dtApp-navbar-wrapper{
+#desktopApp-navbar-wrapper{
     height: 8%;
 }
 #nav-bar-wrapper{
@@ -17,6 +17,9 @@
         padding : 3px;
         p{
             color: black;
+            font-weight: bolder;
+            font-size: 1.25em;
+
         }
     }
     .selected-nav-tab{

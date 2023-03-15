@@ -1,23 +1,12 @@
-#dtApp-footer {
+@import "./variables.scss";
+#desktopApp-footer {
     display: flex;
     justify-content: space-between;
     background-color: grey;
-  
-    #dtApp-contact-wrapper {
+    @include centered;
+    #desktopApp-copyright-wrapper {
       @include centered;
-      flex-direction: column;
-  
-      ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 3px;
-  
-        li {
-          @include centered;
-          font-size: .25em;
-        }
-      }
+      padding-right : 40px;
     }
   }
   

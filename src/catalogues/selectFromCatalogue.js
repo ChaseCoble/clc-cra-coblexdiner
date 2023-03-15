@@ -27,7 +27,7 @@ const masterCatalogue = {
                     hoursContent : {
                         name : "Hours and Events",
                         price : 0,
-                        desc : ['Sunday : 4am - 12am', 'Monday : 4am - 12am', 'Tuesday : 4am - 12am', 'Wednesday : 4am - 12am', 'Thursday : 4am - 12am', 'Friday - Saturday : 430am Friday - 2am Sunday'], 
+                        desc : ['Sunday : 12am - 9am', 'Monday : 4am - 12am', 'Tuesday : 4am - 12am', 'Wednesday : 4am - 12am', 'Thursday : 4am - 12am', 'Friday : 430am - 1159pm', 'Saturday : Open 24hrs!'], 
                     }  
                 }
             },
@@ -88,7 +88,7 @@ const masterCatalogue = {
                 contentDesc : 'All our specials are renowned by all that have tasted them. Our head cook has been making Loaded Biscuits and Gravy since he was 8 years old! A recipe perfected over time! The Stuffed French Toast is exquisite and the pancake platter is just what you need to start your day!',
                 content : {
                     special1 : {
-                        name : 'Loaded Byscuits and Gravy',
+                        name : 'Loaded Biscuits and Gravy',
                         price : 13.99,
                         desc : 'Homemade biscuits and freshly made gravy with chunks of sausage, flavorful scrambled eggs, and made to order bacon bits!'
                     },
@@ -100,7 +100,7 @@ const masterCatalogue = {
                     special3 : {
                         name : 'Pancake Platter',
                         price : 14.99,
-                        desc : 'Four full size pancakes with either chocolate pieces, apple pieces, or caramel pieces, as well as 2 free sides!'
+                        desc : 'Four full size pancakes with either chocolate pieces, apple pieces, or caramel pieces!'
                     }
                 }
             },
@@ -434,9 +434,9 @@ const queryCatalogue = function queryCatalogue(menuState, subMenuStateClassifica
         case 1 : selectedCatalogue = masterCatalogue[menuState]
             break;
         case 0 : selectedCatalogue = masterCatalogue
-            console.log('Possible query catalogue Error')
+         
             break;
-        default : console.log('queryCatalogue Default Error')
+        default : console.log('catalogueQuery error')
         }
         return selectedCatalogue;
 }

@@ -2,19 +2,34 @@ import React from "react";
 import MenuNav from "./menuNav";
 import MenuItem from "./menuItem";
 import Cart from "./cart";
-import CartTotal from "./cartTotal";
 import FeaturedImage from "./featuredImage";
 import { queryCatalogue } from "../../catalogues/selectFromCatalogue";
 import { useSelector } from "react-redux";
 
 function MenuContainer() {
   const menuState = useSelector((state) => state.menuState);
+  const cartState = useSelector((state) => state.cartState);
   const menuTitle = queryCatalogue(
     menuState.menuState,
     "subCategories",
     menuState.subMenuState,
     "subCategoryName"
   );
+  function cartTotal() {
+    if (menuState.menuState !== "aboutUs") {
+          function cartSum() {
+            let total = 0;
+            const priceList = cartState.price;
+            for (let i = 0; i < priceList.length; i++) {
+              total += priceList[i];
+            }
+              return total;
+  }
+    return (
+      <div id='cart-total'>Total = ${cartSum().toFixed(2)}</div>
+    )
+    }
+  }
   return (
     <div className="menu-container">
       <div className="menu-header">
@@ -40,12 +55,9 @@ function MenuContainer() {
         </div>
       </div>
       <div className="menu-footer">
-        <div id="greeting">
-          <p>Thank you so much for visiting us!</p>
-        </div>
         <div id = 'cart-wrapper'>
             <Cart/>
-            <CartTotal />
+            {cartTotal()}
         </div>
       </div>
     </div>

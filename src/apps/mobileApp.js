@@ -1,27 +1,27 @@
 import React , { useState } from 'react';
 import MenuContainer from '../components/menu/menuContainer'
 import NavBar from '../components/navBar'
-import ChatBot from '../components/chatbot'
+import ChatBot from '../components/chatBot'
 import ReactModal from 'react-modal';
 import  logo  from "../helpers/images/logo.jpg";
 
-function MobApp() {
+function MobileApp() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return(
-        <div id = "mobApp-container">
-            <div id = "mobApp-header">
-                <div id = "mobApp-logo">
-                    <img src = { logo } alt = "Coble X Diner" />
+        <div id = "mobileApp-container">
+            <div id = "mobileApp-header">
+                <div id = "mobileApp-logo">
+                    <img src = { logo } alt = "Coble X Diner" className = "clickable" />
                 </div>
             </div>
-            <div id = "mobApp-navbar">
+            <div id = "mobileApp-navbar">
                 <NavBar />
             </div>
-            <div id = "mobApp-menu-container">
+            <div id = "mobileApp-menu-container">
                 <MenuContainer/>            
             </div>
-            <div id = "mobApp-bottom-row">
-                <div id = "mobApp-chatbot-modal-wrapper">
+            <div id = "mobileApp-bottom-row">
+                <div id = "mobileApp-chatbot-modal-wrapper">
                 <button onClick={() => setIsModalOpen(true)}>Chat with a seemingly real Server!</button>
             <ReactModal 
                 isOpen={isModalOpen}
@@ -35,4 +35,4 @@ function MobApp() {
     )
 }
 
-export default MobApp;
+export default MobileApp;

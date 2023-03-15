@@ -1,15 +1,21 @@
 import React, {useState} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
-import { clearCart } from '../../features/cartSlice';
-import { updateChatMenuState, updateChatSubCategoryState, updateMenuState, updateSubMenuState } from '../../features/menuStatesSlice';
+import { clearCart } from '../../redux/features/cartSlice';
+import { updateChatMenuState, updateChatSubCategoryState, updateMenuState, updateSubMenuState } from '../../redux/features/menuStatesSlice';
 import ReactModal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 function Cart() {
-    const cartIcon = <FontAwesomeIcon onClick={() => setIsModalOpen(true)} icon = { faShoppingCart } />
     const cartState = useSelector((state) => state.cartState);
     const menuState = useSelector((state) => state.menuState);
+    function cartIcon() {
+      if (menuState.menuState !== "aboutUs") {
+        return(
+          <FontAwesomeIcon onClick={() => setIsModalOpen(true)} className = "clickable" icon = { faShoppingCart } />
+        );
+      };
+    }; 
     const dispatch = useDispatch();
     const [isModalOpen, setIsModalOpen] = useState(false);
     function cartItemObject(array1, array2) {
@@ -77,7 +83,7 @@ function Cart() {
       
     return (
         <div className = 'cart-modal-wrapper'>
-            {cartIcon}
+            {cartIcon()}
             <ReactModal 
                 isOpen={isModalOpen}
                 shouldCloseOnOverlayClick={true}

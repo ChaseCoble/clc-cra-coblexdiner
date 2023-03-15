@@ -1,6 +1,6 @@
-import MobApp from './apps/mobApp';
-import DtApp from './apps/dtApp';
-import './main.scss';
+import MobileApp from '../src/apps/mobileApp';
+import DesktopApp from '../src/apps/desktopApp';
+import '../src/styles/main.scss';
 
 
 function DeviceFork() { 
@@ -19,11 +19,11 @@ function DeviceFork() {
   }
   if (vpdetect() === true) {
     return (
-        < MobApp />
+        < MobileApp />
     )
     } else {
     return (
-        < DtApp />
+        < DesktopApp />
     )
     };    
 }
