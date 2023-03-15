@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuContainer from '../components/menu/menuContainer'
 import NavBar from '../components/navBar'
-import ChatBot from '../components/chatBot.js'
+import ChatBot from '../components/chatbot.js'
 import  logo  from "../helpers/images/logo.jpg";
 import { useDispatch } from 'react-redux';
 import { updateMenuState, updateChatMenuState, updateSubMenuState, updateChatSubCategoryState } from '../redux/features/menuStatesSlice';

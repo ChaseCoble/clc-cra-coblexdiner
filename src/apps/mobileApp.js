@@ -1,7 +1,7 @@
 import React , { useState } from 'react';
 import MenuContainer from '../components/menu/menuContainer'
 import NavBar from '../components/navBar'
-import ChatBot from '../components/chatBot'
+import ChatBot from '../components/chatbot'
 import ReactModal from 'react-modal';
 import  logo  from "../helpers/images/logo.jpg";
 
