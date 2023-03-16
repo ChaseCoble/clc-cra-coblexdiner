@@ -9,7 +9,10 @@ body{
 #desktopApp-content{
     display: flex;
     flex-direction: row;
-    background-color: $greywhite;
+    background-image: url('../../public/background/headerbg.jpg');
+    background-size: fill;
+    background-position: center center;
+    background-repeat: none;
     padding-bottom: 3px;
     height: 100%;
 }

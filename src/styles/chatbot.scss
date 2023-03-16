@@ -2,13 +2,16 @@
 .chat-wrapper{
     display: flex;
     flex-direction: column;
-    margin-top : 10px;
+    margin-top: 1.5%;
     height: 100%;
+    max-height: 100%;
     background-color : $greywhite;
     width: 33%;
     margin-left: 10px;
+    margin-bottom: 21%;
+    border: 2px solid black;
     #chat-helper{
-        height: 30.4vh;
+        height: 50%;
     }
 }
 #chat-header-wrapper{
@@ -30,5 +33,7 @@
         align-items : center;
 }
 .chat-content-wrapper{
+    display: flex;
     margin: 5px;
+    height: 100%;
 }
