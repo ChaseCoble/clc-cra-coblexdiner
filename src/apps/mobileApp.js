@@ -3,7 +3,7 @@ import MenuContainer from '../components/menu/menuContainer'
 import NavBar from '../components/navBar'
 import ChatBot from '../components/chatbot'
 import ReactModal from 'react-modal';
-import  logo  from "../helpers/images/logo.jpg";
+import  logo  from "../helpers/images/logo.png";
 
 function MobileApp() {
     const [isModalOpen, setIsModalOpen] = useState(false);

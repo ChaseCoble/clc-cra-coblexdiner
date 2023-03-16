@@ -6,8 +6,10 @@
     align-items : center ;
     height: 10%;
     padding-bottom: 8px;
-    margin-bottom: 5px;
-    background-color: $greywhite;
+    background-image: url('../../public/background/headerbg.jpg');
+    background-size: fill;
+    background-position: center center;
+    background-repeat: none;
     #desktopApp-logo{
         @include centered;
         padding-top: 3px;
@@ -16,6 +18,7 @@
         img {
             width: 80px;
             margin-top: 15px;
+            background: transparentize($color: white, $amount: 1);
         }
     }
     #desktopApp-motto{
@@ -25,5 +28,7 @@
         object-fit: scale-down;
         flex-wrap: wrap;
         font-style: italic;
+        font-weight: bold;
+        color: #c6c8c7;
     }
 }

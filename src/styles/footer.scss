@@ -2,7 +2,11 @@
 #desktopApp-footer {
     display: flex;
     justify-content: space-between;
-    background-color: grey;
+    background-image: url('../../public/background/headerbg.jpg');
+    background-size: fill;
+    background-position: center center;
+    background-repeat: none;
+    padding : 5px 0px 5px 0px;
     @include centered;
     #desktopApp-copyright-wrapper {
       @include centered;
