@@ -6,7 +6,7 @@ body{
     height: 100%;
 }
 
-#desktopApp-content, #mobileApp-container{
+#desktopApp-content{
     display: flex;
     flex-direction: row;
     background-image: url('../../public/background/headerbg.jpg');

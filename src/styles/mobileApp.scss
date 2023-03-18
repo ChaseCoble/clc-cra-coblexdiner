@@ -14,3 +14,9 @@
 #mobileApp-chatbot-modal-wrapper{
     @include centered;
 }
+#mobileApp-container{
+    background-image: url('../../public/background/headerbg.jpg');
+    background-size: fill;
+    background-position: center center;
+    background-repeat: none;
+}
