@@ -6,6 +6,8 @@
     border-bottom: 2px solid black;
     margin: 20px 20px 0px 20px;
     width: 75%;
+    box-shadow: 1px 19px 20px 0px rgba(0,0,0,0.75);
+
 
 
   .menu-header {
@@ -14,6 +16,14 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        #menu-tabs{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          max-width: 100%;
+          min-width: 50%;
+          box-shadow: -14px -9px 16px -7px rgba(0,0,0,0.75), 12px -9px 16px -7px rgba(0,0,0,0.75);
+        }
 
         #menu-tab-filler {
           border-bottom: 2px solid black;

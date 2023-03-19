@@ -31,7 +31,7 @@ function MenuNav() {
 
     return ( 
         <div id = "menu-tab-wrapper">
-            {menuTabs}
+            <div id = "menu-tabs">{menuTabs}</div>
             <div id = "menu-tab-filler"></div>
         </div>
     )
